@@ -1,0 +1,39 @@
+! .Xresources file by Chris Marzullo
+
+xterm*font:        -misc-fixed-medium-r-normal-*-15-*-100-100-*-*-*-*
+xterm*boldFont:    -misc-fixed-medium-r-normal-*-15-*-100-100-*-*-*-*
+
+xterm*background:  grey10
+xterm*foreground:  white
+xterm*highlight:   white
+xterm*color11:     khaki1
+xterm*color12:     SkyBlue3
+
+XTerm*geometry:    80x45+0-0
+
+XTerm*SaveLines: 8000
+
+XTerm*ScrollBar:                true
+*.scrollbar.thumb:         hlines3
+xterm*scrollbar*thickness: 12
+
+*VT100.scrollbar.width:         12
+*VT100.scrollbar.background:    #5f5f5f
+*VT100.scrollbar.foreground:    DarkGray
+*VT100.scrollbar.displayList:\
+foreground      gray90;\
+lines           1,-1,-1,-1,-1,1;\
+foreground      gray60;\
+lines           -1,0,0,0,0,-1
+
+! Make the scrollbar act like a normal handle with left mouse.
+XTerm*VT100.scrollbar.translations:#override \n\
+<Btn1Down>:    StartScroll(Continuous) MoveThumb() NotifyThumb() \n\
+<Btn1Motion>:  MoveThumb() NotifyThumb() \n\
+<Btn2Down>:    StartScroll(Forward) \n\
+<Btn2Motion>:  \n\
+<Btn3Down>:    StartScroll(Backward) \n\
+<Btn4Down>:    StartScroll(Backward) \n\
+<Btn5Down>:    StartScroll(Forward) \n\
+<BtnUp>:       NotifyScroll(Proportional) EndScroll()
+
