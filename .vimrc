@@ -13,3 +13,4 @@ endif
 
 set sw=2 " no of spaces for indeting
 set ts=2 " show \t as 2 spaces and \t when deleting
+set expandtab
